@@ -66,3 +66,5 @@ gem 'twitter'
 gem 'annotate'
 
 gem "highcharts-rails"
+
+gem 'simplecov', :require => false, :group => :test
