@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby "2.3.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -35,6 +35,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'faker'
   gem 'factory_girl_rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem "rspec-core"#, :github => "rspec/rspec-core"
+  gem "rspec-expectations"#, :github => "rspec/rspec-expectations"
+  gem "rspec-mocks"#, :github => "rspec/rspec-mocks"
+  gem "rspec-support"#, :github => "rspec/rspec-support"
 end
 
 group :development do
@@ -48,15 +54,15 @@ end
 
 
 group :test do
-  gem "rspec-core", :github => "rspec/rspec-core"
-  gem "rspec-expectations", :github => "rspec/rspec-expectations"
-  gem "rspec-mocks", :github => "rspec/rspec-mocks"
-  gem "rspec-support", :github => "rspec/rspec-support"
-  gem "rspec-rails", :github => "rspec/rspec-rails"
+
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'sidekiq'
+
+gem 'twitter'
+
 gem 'annotate'
 
-gem 'sidekiq'
+gem "highcharts-rails"

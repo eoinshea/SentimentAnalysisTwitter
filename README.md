@@ -8,6 +8,7 @@ Ruby 2.3.1
 * System dependencies
 Ubuntu 16.04
 Rails 5.0.0
+Postgresql
 
 * Configuration
 bundle install
@@ -19,9 +20,7 @@ rake db:drop && rake db:seed && rake db:migrate && rake db:seed &&   bin/rails d
 rspec
 
 * Services (job queues, cache servers, search engines, etc.)
-Twitter sidekiq
+Twitter 
+sidekiq
 
 * Deployment instructions
-
-* ...
-# SentimentAnalysisTwitter

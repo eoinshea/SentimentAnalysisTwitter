@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202110305) do
+ActiveRecord::Schema.define(version: 20161202124152) do
+
+  create_table "hashtags", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tweets", force: :cascade do |t|
     t.text     "sentiment"
@@ -18,6 +28,11 @@ ActiveRecord::Schema.define(version: 20161202110305) do
     t.datetime "updated_at",      null: false
     t.integer  "twitter_user_id"
     t.index ["twitter_user_id"], name: "index_tweets_on_twitter_user_id"
+  end
+
+  create_table "twitter_services", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "twitter_users", force: :cascade do |t|
